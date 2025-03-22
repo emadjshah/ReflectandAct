@@ -1,6 +1,6 @@
-## Hosted on https://quotes-toliveby.netlify.app/
+## Hosted on https://reflectandact.netlify.app/
 
-Rename the file named "config.example.js" to "config.js" and add your Firebase credentials.
+Rename the file - "config.example.js" to "config.js" and add your Firebase credentials to use it.
 
 ------------
 
@@ -9,8 +9,8 @@ After collecting quotes from various sources over the last two years, I created 
 
 I have also added various features, such as:
 
-1. Random Quote Generator – Displays a random quote from the database.
-2. View All Quotes – Allows browsing all stored quotes at once.
+1. Random Quote Generator - Displays a random quote from the database.
+2. View All Quotes - Allows browsing all stored quotes at once.
 3. Scrolling Quote Animation – Shows dynamic scrolling text.
 
 A private admin Dashboard that enables me to manage adding or removing quotes.
