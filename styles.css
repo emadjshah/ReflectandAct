@@ -1,0 +1,231 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #568ec6, #e3eaf4);
+  background-image: url('https://media.discordapp.net/attachments/1264484512172216373/1271561753725239297/image.png?ex=67df19aa&is=67ddc82a&hm=6cdb5af43f374ec06f59a420888a04df176586835f121926f41264e1cdaaa089&=&format=webp&quality=lossless'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-color: #31558c; 
+  filter: none; 
+  color: #333;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 10px;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  font-weight:500;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #0056b3, #003c80);
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.section {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.scroll-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+  background-color: #f7f9fc; 
+}
+
+.scroll-container span {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #130463e8;
+  border-radius: 5px;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.fast {
+  animation-duration: 8s; 
+  animation-name: scroll;
+}
+
+.medium {
+  animation-duration: 12s; 
+  animation-name: scroll;
+}
+
+.slow {
+  animation-duration: 16s; 
+  animation-name: scroll;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+  margin-top: 10px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.quote {
+  padding: 20px;
+  background: linear-gradient(135deg, #d4d5e3, #84b4c6);
+  border-left: 5px solid #007bff;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #333;
+  max-width: 500px;
+  min-width: 300px;
+  min-height: 100px;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+
+}
+
+.quote:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#randomQuote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  font-size: 1.4rem;
+  font-style: italic;
+  background: linear-gradient(135deg, #ffffff, #d6e0f5);
+  border-left: 5px solid #007bff;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  min-height: 150px;
+  margin: 40px auto;
+  transition: transform 0.3s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
+  margin-bottom: 30px;
+}
+
+#randomQuote:hover {
+  transform: scale(1.05);
+}
+
+#generator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; 
+}
+
+#generator button {
+  padding: 12px 30px;
+  font-size: 1.2em;
+  border-radius: 30px;
+  background: linear-gradient(to right, #3b65c2, #193571);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#generator h2 {
+  margin-bottom: 20px;
+}
+
+#generator button:hover {
+  background: linear-gradient(to right, #306c96, #0d6290);
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#allQuotes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer button {
+  background-color: #007bff; 
+  color: white;
+  border-radius: 20px; 
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background-color: #0056b3; 
+}

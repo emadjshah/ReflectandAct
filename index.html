@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reflect & Act  </title>
+  <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1264484512172216373/1269969337004068935/image.png?ex=67dfe61c&is=67de949c&hm=8dcb783dc4fd56d69e49840fea8245546f867d78efa31418bf42657a44de31e7&format=webp&quality=lossless&width=1132&height=480&">
+
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="script.js"></script>
+  
+</head>
+<body>
+  <h1>Reflect & Act</h1>
+  
+  <button onclick="showSection('scrolling')">Scrolling Text Animation</button>
+  <button onclick="showSection('allQuotes')">View All Quotes</button>
+  <button onclick="showSection('generator')">Random Quote Generator</button>
+  <button id="addQuoteBtn" style="display:none;" onclick="showSection('addQuote')">Add New Quote</button>
+
+  <div id="scrolling" class="section">
+    <h2>Scrolling Quotes</h2>
+    <div class="scroll-container"></div>
+  </div>
+
+  <div id="allQuotes" class="section">
+    <h2>All Quotes</h2>
+    <div class="grid-container" id="quoteGrid"></div>
+  </div>
+
+  <div id="generator" class="section active">
+    <h2>Random Quote Generator</h2>
+    <div id="randomQuote" class="quote">Click the button to generate a random quote.</div>
+    <button onclick="generateQuote()">Generate Quote</button>
+  </div>
+
+  <div id="addQuote" class="section" style="display:none;">
+    <h2>Add a New Quote</h2>
+    <textarea id="newQuote" rows="4" cols="50" placeholder="Type your new quote here"></textarea>
+    <br><br>
+    <button onclick="addNewQuote()">Add Quote</button>
+    <p id="addQuoteStatus"></p>
+  </div>
+</body>
+
+<footer>
+  <p style="float: left;">Created by Emad J Shah</p>
+  <div style="float: right;">
+    <button id="loginBtn" onclick="login()">Login</button>
+    <button id="logoutBtn" onclick="logout()" style="display: none;">Logout</button>
+  </div>
+</footer>
+
+</html>
