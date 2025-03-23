@@ -12,7 +12,7 @@ const auth = getAuth();
 
 let quotes = [];
 
-// ** Show Section Function **
+// Show Section Function
 window.showSection = function (section) {
   document.querySelectorAll(".section").forEach((sec) => {
     sec.classList.remove("active");
@@ -29,7 +29,7 @@ window.showSection = function (section) {
   }
 };
 
-// ** Login Functionality **
+// Login Functionality 
 window.login = async function () {
   const email = prompt("Enter your email:");
   const password = prompt("Enter your password:");
@@ -75,7 +75,7 @@ onAuthStateChanged(auth, async (user) => {
   }
 });
 
-// ** Load Quotes from Firestore **
+//  Load Quotes from Firestore 
 async function loadQuotes() {
   try {
     console.log("Loading quotes...");
@@ -99,7 +99,7 @@ async function loadQuotes() {
   }
 }
 
-// ** Scrolling Text Animation **
+//  Scrolling Text Animation 
 function startScrolling() {
   const scrollContainer = document.querySelector(".scroll-container");
 
@@ -127,7 +127,7 @@ function startScrolling() {
   }, 1000);
 }
 
-// ** Populate Quotes Grid with Delete Option **
+// Populate Quotes Grid with Delete Option 
 function populateQuotesGrid() {
   const grid = document.getElementById("quoteGrid");
   grid.innerHTML = "";
@@ -157,7 +157,7 @@ function populateQuotesGrid() {
   });
 }
 
-// ** Generate a Random Quote **
+//  Generate a Random Quote 
 window.generateQuote = function () {
   if (quotes.length > 0) {
     const randomIndex = Math.floor(Math.random() * quotes.length);
@@ -165,7 +165,7 @@ window.generateQuote = function () {
   }
 };
 
-// ** Add a New Quote to Firestore **
+//  Add a New Quote to Firestore 
 window.addNewQuote = async function () {
   const newQuote = document.getElementById("newQuote").value;
   if (newQuote.trim() === "") return alert("Please enter a quote");
